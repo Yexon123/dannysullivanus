@@ -4,16 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Danny Sullivan</title>
-  <meta name="description" content="Personal website of Danny Sullivan, owner and founder of Astreon Innovations and co-owner of A I M1 Matchpoint Sports Bar &amp; Events">
+  <meta name="description" content="Personal website of Danny Sullivan, owner and founder of Astreon Innovations and co-owner of @AIM1 and @Matchpoint Sports Bar &amp; Events.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHJ4PSI4IiBmaWxsPSIjMDAwMDAwIi8+CiAgPHBhdGggZD0iTTkgOEgyMUMyMy4yMDkxIDggMjUgOS43OTA4NiAyNSAxMlYyMEMyNSAyMi4yMDkxIDIzLjIwOTEgMjQgMjEgMjRIOVY4WiIgZmlsbD0iI0ZGRkZGRiIvPgogIDxwYXRoIGQ9Ik0xMyAxMkgxOUMyMC4xMDQ2IDEyIDIxIDEyLjg5NTQgMjEgMTRWMThDMjEgMTkuMTA0NiAyMC4xMDQ2IDIwIDE5IDIwSDEzVjEyWiIgZmlsbD0iIzAwMDAwMCIvPgo8L3N2Zz4K">
-  <script src="/_sdk/element_sdk.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #000000;
+      color: #ffffff;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
     }
     
-    html, body {
+    html {
       height: 100%;
       margin: 0;
       padding: 0;
@@ -38,319 +43,131 @@
   </style>
   <style>@view-transition { navigation: auto; }</style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
  </head>
- <body class="smooth-scroll">
-  <div id="app" class="min-h-full"></div>
+ <body class="smooth-scroll"><!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-4" style="background-color: #000000; border-bottom: 1px solid #ffffff;">
+   <div class="max-w-6xl mx-auto flex justify-between items-center">
+    <div style="font-size: 24px; font-weight: 700; color: #ffffff;">
+     Danny Sullivan
+    </div><!-- Hamburger Menu Button --> <button id="hamburger-btn" style="background: none; border: none; cursor: pointer; padding: 8px;">
+     <div id="hamburger-icon">
+      <div style="width: 25px; height: 3px; background-color: #ffffff; margin: 5px 0; transition: 0.3s;"></div>
+      <div style="width: 25px; height: 3px; background-color: #ffffff; margin: 5px 0; transition: 0.3s;"></div>
+      <div style="width: 25px; height: 3px; background-color: #ffffff; margin: 5px 0; transition: 0.3s;"></div>
+     </div></button>
+   </div><!-- Mobile Menu -->
+   <div id="mobile-menu" style="position: absolute; top: 100%; left: 0; right: 0; background-color: #000000; border-bottom: 1px solid #ffffff; transform: translateY(-100%); opacity: 0; visibility: hidden; transition: all 0.3s ease;">
+    <div class="px-6 py-4"><a href="#about" style="display: block; font-size: 18px; color: #ffffff; text-decoration: none; padding: 12px 0; border-bottom: 1px solid #ffffff; transition: color 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#ffffff'">About Danny Sullivan</a> <a href="#contact" style="display: block; font-size: 18px; color: #ffffff; text-decoration: none; padding: 12px 0; border-bottom: 1px solid #ffffff; transition: color 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#ffffff'">Contact</a> <a href="#social" style="display: block; font-size: 18px; color: #ffffff; text-decoration: none; padding: 12px 0; transition: color 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#ffffff'">Social Media</a>
+    </div>
+   </div>
+  </nav><!-- Hero Section -->
+  <section class="flex items-center justify-center px-4 sm:px-6" style="padding-top: 80px; padding-bottom: 10px; min-height: 40vh;">
+   <div class="max-w-3xl text-center">
+    <div style="font-size: 32px; font-weight: 800; margin-bottom: 8px; line-height: 1.1; color: #ffffff;">
+     Danny Sullivan
+    </div>
+    <div style="font-size: 18px; font-weight: 600; margin-bottom: 8px; color: #ffffff;">
+     Technology &amp; Security Entrepreneur
+    </div>
+    <p style="font-size: 14px; line-height: 1.5; color: #ffffff; opacity: 0.9; max-width: 500px; margin: 0 auto;">Leading innovation in AI-powered security solutions and cybersecurity programs</p>
+   </div>
+  </section><!-- About Section -->
+  <section id="about" class="px-4 sm:px-6 py-4 sm:py-5" style="background-color: #ffffff;">
+   <div class="max-w-3xl mx-auto">
+    <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 12px; color: #000000;">About Me</h2>
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+     <p style="font-size: 14px; line-height: 1.6; color: #000000; opacity: 0.9;">As a technology entrepreneur, I've dedicated my career to advancing the field of security through innovative AI solutions. My passion lies in creating cutting-edge technologies that protect businesses and individuals in an increasingly digital world.</p>
+     <p style="font-size: 14px; line-height: 1.6; color: #000000; opacity: 0.9;">Through my company, we deliver comprehensive technology services specializing in AI-driven security systems and custom cybersecurity programs. Our mission is to make advanced security accessible and effective for organizations of all sizes.</p>
+    </div>
+   </div>
+  </section><!-- Contact Section -->
+  <section id="contact" class="px-4 sm:px-6 py-4 sm:py-5" style="background-color: #ffffff;">
+   <div class="max-w-2xl mx-auto text-center">
+    <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 10px; color: #000000;">Let's Connect</h2>
+    <p style="font-size: 14px; line-height: 1.5; margin-bottom: 16px; color: #000000; opacity: 0.9;">Interested in learning more about how we can secure your digital future?</p><a href="mailto:contact@dannysullivan.us" style="display: inline-block; background-color: #000000; color: #ffffff; padding: 12px 24px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.3s; min-width: 120px;" onmouseover="this.style.backgroundColor='#ffffff'; this.style.color='#000000'; this.style.transform='scale(1.05)'" onmouseout="this.style.backgroundColor='#000000'; this.style.color='#ffffff'; this.style.transform='scale(1)'"> Get In Touch </a>
+   </div>
+  </section><!-- Social Media Section -->
+  <section id="social" class="px-4 sm:px-6 py-4 sm:py-5">
+   <div class="max-w-3xl mx-auto text-center">
+    <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 16px; color: #ffffff;">Danny Sullivan Social Media</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 12px; max-width: 600px; margin: 0 auto;"><!-- LinkedIn --> <a href="https://linkedin.com/in/dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: 12px; background-color: #ffffff; border-radius: 8px; transition: all 0.3s;">
+      <div style="width: 40px; height: 40px; background-color: #000000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 8px;">
+       <svg width="20" height="20" viewbox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+       </svg>
+      </div><span style="font-size: 12px; font-weight: 600; color: #000000;">LinkedIn</span> </a> <!-- X (Twitter) --> <a href="https://x.com/dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: 12px; background-color: #ffffff; border-radius: 8px; transition: all 0.3s;">
+      <div style="width: 40px; height: 40px; background-color: #000000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 8px;">
+       <svg width="20" height="20" viewbox="0 0 24 24" fill="white"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+       </svg>
+      </div><span style="font-size: 12px; font-weight: 600; color: #000000;">X</span> </a> <!-- Instagram --> <a href="https://instagram.com/dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: 12px; background-color: #ffffff; border-radius: 8px; transition: all 0.3s;">
+      <div style="width: 40px; height: 40px; background-color: #000000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 8px;">
+       <svg width="20" height="20" viewbox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+       </svg>
+      </div><span style="font-size: 12px; font-weight: 600; color: #000000;">Instagram</span> </a> <!-- Facebook --> <a href="https://facebook.com/dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: 12px; background-color: #ffffff; border-radius: 8px; transition: all 0.3s;">
+      <div style="width: 40px; height: 40px; background-color: #000000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 8px;">
+       <svg width="20" height="20" viewbox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+       </svg>
+      </div><span style="font-size: 12px; font-weight: 600; color: #000000;">Facebook</span> </a> <!-- Threads --> <a href="https://threads.net/@dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: 12px; background-color: #ffffff; border-radius: 8px; transition: all 0.3s;">
+      <div style="width: 40px; height: 40px; background-color: #000000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 8px;">
+       <svg width="20" height="20" viewbox="0 0 24 24" fill="white"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.781 3.631 2.695 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.74-1.755-.365-.424-.84-.636-1.414-.636-.861 0-1.436.357-1.711.357-.3 0-.498-.174-.498-.498 0-.324.224-.498.498-.498.498 0 1.436-.357 2.457-.357 1.022 0 1.872.498 2.457 1.436.498.8.747 1.997.747 3.456v.049c.997.112 1.748.498 2.457 1.19.498.498.747 1.22.747 2.034 0 .498-.125.997-.374 1.436-.498.997-1.436 1.686-2.708 1.686-.498 0-.997-.125-1.436-.374-.498-.249-.872-.623-1.121-1.121-.249-.498-.374-.997-.374-1.436v-.049c-.997-.112-1.748-.498-2.457-1.19-.498-.498-.747-1.22-.747-2.034 0-.498.125-.997.374-1.436.498-.997 1.436-1.686 2.708-1.686.498 0 .997.125 1.436.374.498.249.872.623 1.121 1.121.249.498.374.997.374 1.436z" />
+       </svg>
+      </div><span style="font-size: 12px; font-weight: 600; color: #000000;">Threads</span> </a> <!-- Bluesky --> <a href="https://bsky.app/profile/dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: 12px; background-color: #ffffff; border-radius: 8px; transition: all 0.3s;">
+      <div style="width: 40px; height: 40px; background-color: #000000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 8px;">
+       <svg width="20" height="20" viewbox="0 0 24 24" fill="white"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-2.67-.297-5.568.628-6.383 3.364C.378 17.903 0 22.861 0 23.55c0 .688.139 1.86.902 2.204.659.298 1.664.62 4.3-1.24C7.954 22.572 10.913 18.633 12 16.519c1.087 2.114 4.046 6.053 6.798 7.995 2.636 1.86 3.641 1.538 4.3 1.24.763-.344.902-1.516.902-2.204 0-.689-.378-5.647-.624-6.476-.815-2.736-3.713-3.661-6.383-3.364-.139.016-.277.034-.415.056.138-.017.276-.036.415-.056 2.67.297 5.568-.628 6.383-3.364.246-.829.624-5.789.624-6.479 0-.688-.139-1.86-.902-2.203-.659-.299-1.664-.621-4.3 1.24C16.046 4.747 13.087 8.686 12 10.8z" />
+       </svg>
+      </div><span style="font-size: 12px; font-weight: 600; color: #000000;">Bluesky</span> </a> <!-- WeChat --> <a href="https://weixin.qq.com/dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: 12px; background-color: #ffffff; border-radius: 8px; transition: all 0.3s;">
+      <div style="width: 40px; height: 40px; background-color: #000000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 8px;">
+       <svg width="20" height="20" viewbox="0 0 24 24" fill="white"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.99 4.203 4.203 4.203.5 0 .985-.094 1.44-.281l2.906 1.453-.813-2.406c.188-.188.375-.375.563-.563 1.031-1.031 1.594-2.406 1.594-3.906 0-4.054-3.891-7.342-8.691-7.342zm-2.219 5.281c-.688 0-1.25-.563-1.25-1.25s.563-1.25 1.25-1.25 1.25.563 1.25 1.25-.563 1.25-1.25 1.25zm4.438 0c-.688 0-1.25-.563-1.25-1.25s.563-1.25 1.25-1.25 1.25.563 1.25 1.25-.563 1.25-1.25 1.25zm7.313 1.25c.5 0 .985.094 1.44.281l2.906-1.453-.813 2.406c.188.188.375.375.563.563 1.031 1.031 1.594 2.406 1.594 3.906 0 4.054-3.891 7.342-8.691 7.342-4.8 0-8.691-3.288-8.691-7.342 0-2.212 1.99-4.203 4.203-4.203zm-2.219 5.281c-.688 0-1.25-.563-1.25-1.25s.563-1.25 1.25-1.25 1.25.563 1.25 1.25-.563 1.25-1.25 1.25zm4.438 0c-.688 0-1.25-.563-1.25-1.25s.563-1.25 1.25-1.25 1.25.563 1.25 1.25-.563 1.25-1.25 1.25z" />
+       </svg>
+      </div><span style="font-size: 12px; font-weight: 600; color: #000000;">WeChat</span> </a>
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer class="px-6 py-4 text-center" style="border-top: 1px solid #ffffff;">
+   <p style="font-size: 14px; color: #ffffff; opacity: 0.7;">© 2019 Danny Sullivan. All rights reserved.</p>
+  </footer>
   <script>
-    const defaultConfig = {
-      background_color: "#000000",
-      surface_color: "#ffffff",
-      text_color: "#ffffff",
-      primary_action_color: "#ffffff",
-      secondary_action_color: "#000000",
-      font_family: "Inter",
-      font_size: 16,
-      main_title: "Danny Sullivan",
-      subtitle: "Technology & Security Entrepreneur",
-      hero_description: "Leading innovation in AI-powered security solutions and cybersecurity programs",
-      about_title: "About Me",
-      bio_paragraph_1: "As a technology entrepreneur, I've dedicated my career to advancing the field of security through innovative AI solutions. My passion lies in creating cutting-edge technologies that protect businesses and individuals in an increasingly digital world.",
-      bio_paragraph_2: "Through my company, we deliver comprehensive technology services specializing in AI-driven security systems and custom cybersecurity programs. Our mission is to make advanced security accessible and effective for organizations of all sizes.",
-      social_title: "Danny Sullivan Social Media",
-      contact_title: "Let's Connect",
-      contact_description: "Interested in learning more about how we can secure your digital future?",
-      contact_button: "Get In Touch"
-    };
+    // Add hamburger menu functionality
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    let isMenuOpen = false;
 
-    async function onConfigChange(config) {
-      const app = document.getElementById('app');
-      const fontFamily = config.font_family || defaultConfig.font_family;
-      const baseFontStack = 'system-ui, -apple-system, sans-serif';
-      const fontSize = config.font_size || defaultConfig.font_size;
+    hamburgerBtn.addEventListener('click', () => {
+      isMenuOpen = !isMenuOpen;
       
-      const backgroundColor = config.background_color || defaultConfig.background_color;
-      const surfaceColor = config.surface_color || defaultConfig.surface_color;
-      const textColor = config.text_color || defaultConfig.text_color;
-      const primaryActionColor = config.primary_action_color || defaultConfig.primary_action_color;
-      const secondaryActionColor = config.secondary_action_color || defaultConfig.secondary_action_color;
-      
-      app.style.backgroundColor = backgroundColor;
-      app.style.color = textColor;
-      app.style.fontFamily = `${fontFamily}, ${baseFontStack}`;
-      
-      app.innerHTML = `
-        <!-- Navigation -->
-        <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-4" style="background-color: ${backgroundColor}; border-bottom: 1px solid ${surfaceColor};">
-          <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <div style="font-size: ${fontSize * 1.25}px; font-weight: 700; color: ${textColor};">
-              ${config.main_title || defaultConfig.main_title}
-            </div>
-            <!-- Hamburger Menu Button -->
-            <button id="hamburger-btn" style="background: none; border: none; cursor: pointer; padding: 8px;">
-              <div id="hamburger-icon">
-                <div style="width: 25px; height: 3px; background-color: ${textColor}; margin: 5px 0; transition: 0.3s;"></div>
-                <div style="width: 25px; height: 3px; background-color: ${textColor}; margin: 5px 0; transition: 0.3s;"></div>
-                <div style="width: 25px; height: 3px; background-color: ${textColor}; margin: 5px 0; transition: 0.3s;"></div>
-              </div>
-            </button>
-          </div>
-          
-          <!-- Mobile Menu -->
-          <div id="mobile-menu" style="position: absolute; top: 100%; left: 0; right: 0; background-color: ${backgroundColor}; border-bottom: 1px solid ${surfaceColor}; transform: translateY(-100%); opacity: 0; visibility: hidden; transition: all 0.3s ease;">
-            <div class="px-6 py-4">
-              <a href="#about" style="display: block; font-size: ${fontSize * 1.125}px; color: ${textColor}; text-decoration: none; padding: 12px 0; border-bottom: 1px solid ${surfaceColor}; transition: color 0.3s;" onmouseover="this.style.color='${primaryActionColor}'" onmouseout="this.style.color='${textColor}'">About Danny Sullivan</a>
-              <a href="#contact" style="display: block; font-size: ${fontSize * 1.125}px; color: ${textColor}; text-decoration: none; padding: 12px 0; border-bottom: 1px solid ${surfaceColor}; transition: color 0.3s;" onmouseover="this.style.color='${primaryActionColor}'" onmouseout="this.style.color='${textColor}'">Contact</a>
-              <a href="#social" style="display: block; font-size: ${fontSize * 1.125}px; color: ${textColor}; text-decoration: none; padding: 12px 0; transition: color 0.3s;" onmouseover="this.style.color='${primaryActionColor}'" onmouseout="this.style.color='${textColor}'">Social Media</a>
-            </div>
-          </div>
-        </nav>
+      if (isMenuOpen) {
+        mobileMenu.style.transform = 'translateY(0)';
+        mobileMenu.style.opacity = '1';
+        mobileMenu.style.visibility = 'visible';
+      } else {
+        mobileMenu.style.transform = 'translateY(-100%)';
+        mobileMenu.style.opacity = '0';
+        mobileMenu.style.visibility = 'hidden';
+      }
+    });
 
-        <!-- Hero Section -->
-        <section class="min-h-full flex items-center justify-center px-4 sm:px-6" style="padding-top: 80px; padding-bottom: 60px;">
-          <div class="max-w-4xl text-center">
-            <div style="font-size: ${Math.max(fontSize * 2.5, 32)}px; font-weight: 800; margin-bottom: ${fontSize * 1.5}px; line-height: 1.1; color: ${textColor};">
-              ${config.main_title || defaultConfig.main_title}
-            </div>
-            <div style="font-size: ${Math.max(fontSize * 1.25, 18)}px; font-weight: 600; margin-bottom: ${fontSize * 1.5}px; color: ${primaryActionColor};">
-              ${config.subtitle || defaultConfig.subtitle}
-            </div>
-            <p style="font-size: ${Math.max(fontSize * 1.125, 16)}px; line-height: 1.6; color: ${textColor}; opacity: 0.9; max-width: 700px; margin: 0 auto;">
-              ${config.hero_description || defaultConfig.hero_description}
-            </p>
-          </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="px-4 sm:px-6 py-16 sm:py-20" style="background-color: ${surfaceColor};">
-          <div class="max-w-4xl mx-auto">
-            <h2 style="font-size: ${Math.max(fontSize * 2, 28)}px; font-weight: 700; margin-bottom: ${fontSize * 1.5}px; color: ${backgroundColor};">
-              ${config.about_title || defaultConfig.about_title}
-            </h2>
-            <div style="display: flex; flex-direction: column; gap: ${fontSize * 1.5}px;">
-              <p style="font-size: ${Math.max(fontSize * 1.0625, 16)}px; line-height: 1.8; color: ${backgroundColor}; opacity: 0.9;">
-                ${config.bio_paragraph_1 || defaultConfig.bio_paragraph_1}
-              </p>
-              <p style="font-size: ${Math.max(fontSize * 1.0625, 16)}px; line-height: 1.8; color: ${backgroundColor}; opacity: 0.9;">
-                ${config.bio_paragraph_2 || defaultConfig.bio_paragraph_2}
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="px-4 sm:px-6 py-16 sm:py-20" style="background-color: ${surfaceColor};">
-          <div class="max-w-2xl mx-auto text-center">
-            <h2 style="font-size: ${Math.max(fontSize * 2, 28)}px; font-weight: 700; margin-bottom: ${fontSize * 1.5}px; color: ${backgroundColor};">
-              ${config.contact_title || defaultConfig.contact_title}
-            </h2>
-            <p style="font-size: ${Math.max(fontSize * 1.0625, 16)}px; line-height: 1.6; margin-bottom: ${fontSize * 2}px; color: ${backgroundColor}; opacity: 0.9;">
-              ${config.contact_description || defaultConfig.contact_description}
-            </p>
-            <a href="mailto:contact@dannysullivan.us" style="display: inline-block; background-color: ${backgroundColor}; color: ${surfaceColor}; padding: ${fontSize * 0.875}px ${fontSize * 2}px; border-radius: ${fontSize * 0.5}px; font-size: ${Math.max(fontSize * 1.0625, 16)}px; font-weight: 600; text-decoration: none; transition: all 0.3s; min-width: 140px;" onmouseover="this.style.backgroundColor='${surfaceColor}'; this.style.color='${backgroundColor}'; this.style.transform='scale(1.05)'" onmouseout="this.style.backgroundColor='${backgroundColor}'; this.style.color='${surfaceColor}'; this.style.transform='scale(1)'">
-              ${config.contact_button || defaultConfig.contact_button}
-            </a>
-          </div>
-        </section>
-
-        <!-- Social Media Section -->
-        <section id="social" class="px-4 sm:px-6 py-16 sm:py-20">
-          <div class="max-w-4xl mx-auto text-center">
-            <h2 style="font-size: ${Math.max(fontSize * 2, 28)}px; font-weight: 700; margin-bottom: ${fontSize * 2.5}px; color: ${textColor};">
-              ${config.social_title || defaultConfig.social_title}
-            </h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: ${fontSize * 1}px; max-width: 600px; margin: 0 auto;">
-              <!-- LinkedIn -->
-              <a href="https://linkedin.com/in/dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: ${fontSize * 1}px; background-color: ${surfaceColor}; border-radius: ${fontSize * 0.75}px; transition: all 0.3s;">
-                <div style="width: ${Math.max(fontSize * 3, 48)}px; height: ${Math.max(fontSize * 3, 48)}px; background-color: ${backgroundColor}; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: ${fontSize * 0.5}px;">
-                  <svg width="${Math.max(fontSize * 1.5, 24)}" height="${Math.max(fontSize * 1.5, 24)}" viewBox="0 0 24 24" fill="white">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
-                </div>
-                <span style="font-size: ${Math.max(fontSize * 0.75, 12)}px; font-weight: 600; color: ${backgroundColor};">LinkedIn</span>
-              </a>
-
-              <!-- X (Twitter) -->
-              <a href="https://x.com/dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: ${fontSize * 1}px; background-color: ${surfaceColor}; border-radius: ${fontSize * 0.75}px; transition: all 0.3s;">
-                <div style="width: ${Math.max(fontSize * 3, 48)}px; height: ${Math.max(fontSize * 3, 48)}px; background-color: ${backgroundColor}; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: ${fontSize * 0.5}px;">
-                  <svg width="${Math.max(fontSize * 1.5, 24)}" height="${Math.max(fontSize * 1.5, 24)}" viewBox="0 0 24 24" fill="white">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                  </svg>
-                </div>
-                <span style="font-size: ${Math.max(fontSize * 0.75, 12)}px; font-weight: 600; color: ${backgroundColor};">X</span>
-              </a>
-
-              <!-- Instagram -->
-              <a href="https://instagram.com/dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: ${fontSize * 1}px; background-color: ${surfaceColor}; border-radius: ${fontSize * 0.75}px; transition: all 0.3s;">
-                <div style="width: ${Math.max(fontSize * 3, 48)}px; height: ${Math.max(fontSize * 3, 48)}px; background-color: ${backgroundColor}; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: ${fontSize * 0.5}px;">
-                  <svg width="${Math.max(fontSize * 1.5, 24)}" height="${Math.max(fontSize * 1.5, 24)}" viewBox="0 0 24 24" fill="white">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                  </svg>
-                </div>
-                <span style="font-size: ${Math.max(fontSize * 0.75, 12)}px; font-weight: 600; color: ${backgroundColor};">Instagram</span>
-              </a>
-
-              <!-- Facebook -->
-              <a href="https://facebook.com/dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: ${fontSize * 1}px; background-color: ${surfaceColor}; border-radius: ${fontSize * 0.75}px; transition: all 0.3s;">
-                <div style="width: ${Math.max(fontSize * 3, 48)}px; height: ${Math.max(fontSize * 3, 48)}px; background-color: ${backgroundColor}; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: ${fontSize * 0.5}px;">
-                  <svg width="${Math.max(fontSize * 1.5, 24)}" height="${Math.max(fontSize * 1.5, 24)}" viewBox="0 0 24 24" fill="white">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                  </svg>
-                </div>
-                <span style="font-size: ${Math.max(fontSize * 0.75, 12)}px; font-weight: 600; color: ${backgroundColor};">Facebook</span>
-              </a>
-
-              <!-- Threads -->
-              <a href="https://threads.net/@dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: ${fontSize * 1}px; background-color: ${surfaceColor}; border-radius: ${fontSize * 0.75}px; transition: all 0.3s;">
-                <div style="width: ${Math.max(fontSize * 3, 48)}px; height: ${Math.max(fontSize * 3, 48)}px; background-color: ${backgroundColor}; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: ${fontSize * 0.5}px;">
-                  <svg width="${Math.max(fontSize * 1.5, 24)}" height="${Math.max(fontSize * 1.5, 24)}" viewBox="0 0 24 24" fill="white">
-                    <path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.781 3.631 2.695 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.74-1.755-.365-.424-.84-.636-1.414-.636-.861 0-1.436.357-1.711.357-.3 0-.498-.174-.498-.498 0-.324.224-.498.498-.498.498 0 1.436-.357 2.457-.357 1.022 0 1.872.498 2.457 1.436.498.8.747 1.997.747 3.456v.049c.997.112 1.748.498 2.457 1.19.498.498.747 1.22.747 2.034 0 .498-.125.997-.374 1.436-.498.997-1.436 1.686-2.708 1.686-.498 0-.997-.125-1.436-.374-.498-.249-.872-.623-1.121-1.121-.249-.498-.374-.997-.374-1.436v-.049c-.997-.112-1.748-.498-2.457-1.19-.498-.498-.747-1.22-.747-2.034 0-.498.125-.997.374-1.436.498-.997 1.436-1.686 2.708-1.686.498 0 .997.125 1.436.374.498.249.872.623 1.121 1.121.249.498.374.997.374 1.436z"/>
-                  </svg>
-                </div>
-                <span style="font-size: ${Math.max(fontSize * 0.75, 12)}px; font-weight: 600; color: ${backgroundColor};">Threads</span>
-              </a>
-
-              <!-- Bluesky -->
-              <a href="https://bsky.app/profile/dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: ${fontSize * 1}px; background-color: ${surfaceColor}; border-radius: ${fontSize * 0.75}px; transition: all 0.3s;">
-                <div style="width: ${Math.max(fontSize * 3, 48)}px; height: ${Math.max(fontSize * 3, 48)}px; background-color: ${backgroundColor}; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: ${fontSize * 0.5}px;">
-                  <svg width="${Math.max(fontSize * 1.5, 24)}" height="${Math.max(fontSize * 1.5, 24)}" viewBox="0 0 24 24" fill="white">
-                    <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-2.67-.297-5.568.628-6.383 3.364C.378 17.903 0 22.861 0 23.55c0 .688.139 1.86.902 2.204.659.298 1.664.62 4.3-1.24C7.954 22.572 10.913 18.633 12 16.519c1.087 2.114 4.046 6.053 6.798 7.995 2.636 1.86 3.641 1.538 4.3 1.24.763-.344.902-1.516.902-2.204 0-.689-.378-5.647-.624-6.476-.815-2.736-3.713-3.661-6.383-3.364-.139.016-.277.034-.415.056.138-.017.276-.036.415-.056 2.67.297 5.568-.628 6.383-3.364.246-.829.624-5.789.624-6.479 0-.688-.139-1.86-.902-2.203-.659-.299-1.664-.621-4.3 1.24C16.046 4.747 13.087 8.686 12 10.8z"/>
-                  </svg>
-                </div>
-                <span style="font-size: ${Math.max(fontSize * 0.75, 12)}px; font-weight: 600; color: ${backgroundColor};">Bluesky</span>
-              </a>
-
-              <!-- WeChat -->
-              <a href="https://weixin.qq.com/dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: ${fontSize * 1}px; background-color: ${surfaceColor}; border-radius: ${fontSize * 0.75}px; transition: all 0.3s;">
-                <div style="width: ${Math.max(fontSize * 3, 48)}px; height: ${Math.max(fontSize * 3, 48)}px; background-color: ${backgroundColor}; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: ${fontSize * 0.5}px;">
-                  <svg width="${Math.max(fontSize * 1.5, 24)}" height="${Math.max(fontSize * 1.5, 24)}" viewBox="0 0 24 24" fill="white">
-                    <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.99 4.203 4.203 4.203.5 0 .985-.094 1.44-.281l2.906 1.453-.813-2.406c.188-.188.375-.375.563-.563 1.031-1.031 1.594-2.406 1.594-3.906 0-4.054-3.891-7.342-8.691-7.342zm-2.219 5.281c-.688 0-1.25-.563-1.25-1.25s.563-1.25 1.25-1.25 1.25.563 1.25 1.25-.563 1.25-1.25 1.25zm4.438 0c-.688 0-1.25-.563-1.25-1.25s.563-1.25 1.25-1.25 1.25.563 1.25 1.25-.563 1.25-1.25 1.25zm7.313 1.25c.5 0 .985.094 1.44.281l2.906-1.453-.813 2.406c.188.188.375.375.563.563 1.031 1.031 1.594 2.406 1.594 3.906 0 4.054-3.891 7.342-8.691 7.342-4.8 0-8.691-3.288-8.691-7.342 0-2.212 1.99-4.203 4.203-4.203zm-2.219 5.281c-.688 0-1.25-.563-1.25-1.25s.563-1.25 1.25-1.25 1.25.563 1.25 1.25-.563 1.25-1.25 1.25zm4.438 0c-.688 0-1.25-.563-1.25-1.25s.563-1.25 1.25-1.25 1.25.563 1.25 1.25-.563 1.25-1.25 1.25z"/>
-                  </svg>
-                </div>
-                <span style="font-size: ${Math.max(fontSize * 0.75, 12)}px; font-weight: 600; color: ${backgroundColor};">WeChat</span>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="px-6 py-8 text-center" style="border-top: 1px solid ${surfaceColor};">
-          <p style="font-size: ${fontSize * 0.875}px; color: ${textColor}; opacity: 0.7;">
-            © 2019 ${config.main_title || defaultConfig.main_title}. All rights reserved.
-          </p>
-        </footer>
-      `;
-
-      // Add hamburger menu functionality
-      const hamburgerBtn = document.getElementById('hamburger-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-      let isMenuOpen = false;
-
-      hamburgerBtn.addEventListener('click', () => {
-        isMenuOpen = !isMenuOpen;
+    // Close menu when clicking on links
+    const menuLinks = mobileMenu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        // Close menu
+        isMenuOpen = false;
+        mobileMenu.style.transform = 'translateY(-100%)';
+        mobileMenu.style.opacity = '0';
+        mobileMenu.style.visibility = 'hidden';
         
-        if (isMenuOpen) {
-          mobileMenu.style.transform = 'translateY(0)';
-          mobileMenu.style.opacity = '1';
-          mobileMenu.style.visibility = 'visible';
-        } else {
-          mobileMenu.style.transform = 'translateY(-100%)';
-          mobileMenu.style.opacity = '0';
-          mobileMenu.style.visibility = 'hidden';
+        // Smooth scroll to section
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
         }
       });
-
-      // Close menu when clicking on links
-      const menuLinks = mobileMenu.querySelectorAll('a');
-      menuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          isMenuOpen = false;
-          mobileMenu.style.transform = 'translateY(-100%)';
-          mobileMenu.style.opacity = '0';
-          mobileMenu.style.visibility = 'hidden';
-        });
-      });
-    }
-
-    function mapToCapabilities(config) {
-      return {
-        recolorables: [
-          {
-            get: () => config.background_color || defaultConfig.background_color,
-            set: (value) => {
-              config.background_color = value;
-              window.elementSdk.setConfig({ background_color: value });
-            }
-          },
-          {
-            get: () => config.surface_color || defaultConfig.surface_color,
-            set: (value) => {
-              config.surface_color = value;
-              window.elementSdk.setConfig({ surface_color: value });
-            }
-          },
-          {
-            get: () => config.text_color || defaultConfig.text_color,
-            set: (value) => {
-              config.text_color = value;
-              window.elementSdk.setConfig({ text_color: value });
-            }
-          },
-          {
-            get: () => config.primary_action_color || defaultConfig.primary_action_color,
-            set: (value) => {
-              config.primary_action_color = value;
-              window.elementSdk.setConfig({ primary_action_color: value });
-            }
-          },
-          {
-            get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
-            set: (value) => {
-              config.secondary_action_color = value;
-              window.elementSdk.setConfig({ secondary_action_color: value });
-            }
-          }
-        ],
-        borderables: [],
-        fontEditable: {
-          get: () => config.font_family || defaultConfig.font_family,
-          set: (value) => {
-            config.font_family = value;
-            window.elementSdk.setConfig({ font_family: value });
-          }
-        },
-        fontSizeable: {
-          get: () => config.font_size || defaultConfig.font_size,
-          set: (value) => {
-            config.font_size = value;
-            window.elementSdk.setConfig({ font_size: value });
-          }
-        }
-      };
-    }
-
-    function mapToEditPanelValues(config) {
-      return new Map([
-        ["main_title", config.main_title || defaultConfig.main_title],
-        ["subtitle", config.subtitle || defaultConfig.subtitle],
-        ["hero_description", config.hero_description || defaultConfig.hero_description],
-        ["about_title", config.about_title || defaultConfig.about_title],
-        ["bio_paragraph_1", config.bio_paragraph_1 || defaultConfig.bio_paragraph_1],
-        ["bio_paragraph_2", config.bio_paragraph_2 || defaultConfig.bio_paragraph_2],
-        ["social_title", config.social_title || defaultConfig.social_title],
-        ["contact_title", config.contact_title || defaultConfig.contact_title],
-        ["contact_description", config.contact_description || defaultConfig.contact_description],
-        ["contact_button", config.contact_button || defaultConfig.contact_button]
-      ]);
-    }
-
-    if (window.elementSdk) {
-      window.elementSdk.init({
-        defaultConfig,
-        onConfigChange,
-        mapToCapabilities,
-        mapToEditPanelValues
-      });
-    }
+    });
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99920f78423208a6',t:'MTc2MjIzNzgwMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'999244aed701f0e0',t:'MTc2MjIzOTk4Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
