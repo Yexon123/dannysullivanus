@@ -24,8 +24,13 @@
       padding: 0;
     }
     
-    .gradient-bg {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    .page {
+      display: none;
+      min-height: 100%;
+    }
+    
+    .page.active {
+      display: block;
     }
     
     .card-hover {
@@ -37,20 +42,31 @@
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     }
     
-    .smooth-scroll {
-      scroll-behavior: smooth;
+    .nav-link {
+      transition: color 0.3s ease;
+    }
+    
+    .nav-link:hover {
+      color: #cccccc !important;
+    }
+    
+    .nav-link.active {
+      color: #ffffff !important;
+      font-weight: 600;
     }
   </style>
   <style>@view-transition { navigation: auto; }</style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
   <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
  </head>
- <body class="smooth-scroll"><!-- Navigation -->
+ <body><!-- Navigation -->
   <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-4" style="background-color: #000000; border-bottom: 1px solid #ffffff;">
    <div class="max-w-6xl mx-auto flex justify-between items-center">
-    <div style="font-size: 24px; font-weight: 700; color: #ffffff;">
+    <div style="font-size: 24px; font-weight: 700; color: #ffffff; cursor: pointer;" onclick="showPage('home')">
      Danny Sullivan
-    </div><!-- Hamburger Menu Button --> <button id="hamburger-btn" style="background: none; border: none; cursor: pointer; padding: 8px;">
+    </div><!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-8"><a href="#" class="nav-link" style="font-size: 16px; color: #ffffff; text-decoration: none;" onclick="showPage('home')">Home</a> <a href="#" class="nav-link" style="font-size: 16px; color: #ffffff; text-decoration: none;" onclick="showPage('about')">About</a> <a href="#" class="nav-link" style="font-size: 16px; color: #ffffff; text-decoration: none;" onclick="showPage('contact')">Contact</a>
+    </div><!-- Hamburger Menu Button --> <button id="hamburger-btn" class="md:hidden" style="background: none; border: none; cursor: pointer; padding: 8px;">
      <div id="hamburger-icon">
       <div style="width: 25px; height: 3px; background-color: #ffffff; margin: 5px 0; transition: 0.3s;"></div>
       <div style="width: 25px; height: 3px; background-color: #ffffff; margin: 5px 0; transition: 0.3s;"></div>
@@ -58,76 +74,198 @@
      </div></button>
    </div><!-- Mobile Menu -->
    <div id="mobile-menu" style="position: absolute; top: 100%; left: 0; right: 0; background-color: #000000; border-bottom: 1px solid #ffffff; transform: translateY(-100%); opacity: 0; visibility: hidden; transition: all 0.3s ease;">
-    <div class="px-6 py-4"><a href="#about" style="display: block; font-size: 18px; color: #ffffff; text-decoration: none; padding: 12px 0; border-bottom: 1px solid #ffffff; transition: color 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#ffffff'">About Danny Sullivan</a> <a href="#contact" style="display: block; font-size: 18px; color: #ffffff; text-decoration: none; padding: 12px 0; border-bottom: 1px solid #ffffff; transition: color 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#ffffff'">Contact</a> <a href="#social" style="display: block; font-size: 18px; color: #ffffff; text-decoration: none; padding: 12px 0; transition: color 0.3s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#ffffff'">Social Media</a>
+    <div class="px-6 py-4"><a href="#" class="nav-link mobile-nav-link" style="display: block; font-size: 18px; color: #ffffff; text-decoration: none; padding: 12px 0; border-bottom: 1px solid #ffffff;" onclick="showPage('home')">Home</a> <a href="#" class="nav-link mobile-nav-link" style="display: block; font-size: 18px; color: #ffffff; text-decoration: none; padding: 12px 0; border-bottom: 1px solid #ffffff;" onclick="showPage('about')">About</a> <a href="#" class="nav-link mobile-nav-link" style="display: block; font-size: 18px; color: #ffffff; text-decoration: none; padding: 12px 0;" onclick="showPage('contact')">Contact</a>
     </div>
    </div>
-  </nav><!-- Hero Section -->
-  <section class="flex items-center justify-center px-4 sm:px-6" style="padding-top: 80px; padding-bottom: 10px; min-height: 40vh;">
-   <div class="max-w-3xl text-center">
-    <div style="font-size: 32px; font-weight: 800; margin-bottom: 8px; line-height: 1.1; color: #ffffff;">
-     Danny Sullivan
+  </nav><!-- HOME PAGE -->
+  <div id="home-page" class="page active"><!-- Hero Section -->
+   <section class="flex items-center justify-center px-4 sm:px-6" style="padding-top: 100px; padding-bottom: 40px; min-height: 80vh;">
+    <div class="max-w-4xl text-center">
+     <div style="font-size: 48px; font-weight: 800; margin-bottom: 16px; line-height: 1.1; color: #ffffff;">
+      Danny Sullivan
+     </div>
+     <div style="font-size: 24px; font-weight: 600; margin-bottom: 16px; color: #ffffff;">
+      Technology &amp; Security Entrepreneur
+     </div>
+     <p style="font-size: 18px; line-height: 1.6; color: #ffffff; opacity: 0.9; max-width: 600px; margin: 0 auto 32px;">Leading innovation in AI-powered security solutions and cybersecurity programs</p>
     </div>
-    <div style="font-size: 18px; font-weight: 600; margin-bottom: 8px; color: #ffffff;">
-     Technology &amp; Security Entrepreneur
+   </section><!-- Footer -->
+   <footer class="px-6 py-6 text-center" style="border-top: 1px solid #ffffff;">
+    <p style="font-size: 14px; color: #ffffff; opacity: 0.7;">© 2019 Danny Sullivan. All rights reserved.</p>
+   </footer>
+  </div><!-- ABOUT PAGE -->
+  <div id="about-page" class="page">
+   <section class="px-4 sm:px-6 py-8" style="padding-top: 120px; min-height: 100vh; background-color: #ffffff;">
+    <div class="max-w-4xl mx-auto">
+     <div style="text-align: center; margin-bottom: 48px;">
+      <h1 style="font-size: 48px; font-weight: 800; margin-bottom: 16px; color: #000000;">About Danny Sullivan</h1>
+      <div style="width: 80px; height: 4px; background-color: #000000; margin: 0 auto;"></div>
+     </div>
+     <div style="display: grid; gap: 32px;"><!-- Main Bio -->
+      <div style="background-color: #f8f9fa; padding: 32px; border-radius: 16px; border-left: 6px solid #000000;">
+       <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 20px; color: #000000;">Technology &amp; Security Entrepreneur</h2>
+       <p style="font-size: 18px; line-height: 1.7; color: #000000; opacity: 0.9; margin-bottom: 20px;">As a technology entrepreneur, I've dedicated my career to advancing the field of security through innovative AI solutions. My passion lies in creating cutting-edge technologies that protect businesses and individuals in an increasingly digital world.</p>
+       <p style="font-size: 18px; line-height: 1.7; color: #000000; opacity: 0.9;">Through my company, we deliver comprehensive technology services specializing in AI-driven security systems and custom cybersecurity programs. Our mission is to make advanced security accessible and effective for organizations of all sizes.</p>
+      </div><!-- Experience Cards -->
+      <div style="display: grid; md:grid-template-columns: repeat(2, 1fr); gap: 24px;">
+       <div style="background-color: #ffffff; padding: 28px; border-radius: 12px; border: 2px solid #000000;">
+        <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 16px; color: #000000;">🚀 Astreon Innovations</h3>
+        <p style="font-size: 16px; line-height: 1.6; color: #000000; opacity: 0.8;">Owner and founder of Astreon Innovations, a cutting-edge technology company focused on AI-powered security solutions and innovative cybersecurity programs.</p>
+       </div>
+       <div style="background-color: #ffffff; padding: 28px; border-radius: 12px; border: 2px solid #000000;">
+        <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 16px; color: #000000;">🎯 @AIM1 &amp; @MatchpointBar</h3>
+        <p style="font-size: 16px; line-height: 1.6; color: #000000; opacity: 0.8;">Co-owner of @AIM1 and @MatchpointBar Sports Bar &amp; Events, bringing innovative experiences to the hospitality and entertainment industry.</p>
+       </div>
+      </div><!-- Skills & Expertise -->
+      <div style="background-color: #000000; color: #ffffff; padding: 32px; border-radius: 16px;">
+       <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 24px; text-align: center;">Areas of Expertise</h2>
+       <div style="display: grid; md:grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: center;">
+        <div>
+         <div style="font-size: 32px; margin-bottom: 12px;">
+          🤖
+         </div>
+         <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">AI Security</h3>
+         <p style="font-size: 14px; opacity: 0.8;">Advanced AI-powered security solutions</p>
+        </div>
+        <div>
+         <div style="font-size: 32px; margin-bottom: 12px;">
+          🔒
+         </div>
+         <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">Cybersecurity</h3>
+         <p style="font-size: 14px; opacity: 0.8;">Custom cybersecurity programs</p>
+        </div>
+        <div>
+         <div style="font-size: 32px; margin-bottom: 12px;">
+          💼
+         </div>
+         <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">Entrepreneurship</h3>
+         <p style="font-size: 14px; opacity: 0.8;">Technology business leadership</p>
+        </div>
+       </div>
+      </div><!-- CTA -->
+      <div style="text-align: center; padding: 32px 0;"><button onclick="showPage('contact')" style="background-color: #000000; color: #ffffff; padding: 16px 32px; border-radius: 8px; font-size: 18px; font-weight: 600; border: none; cursor: pointer; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#333333'; this.style.transform='scale(1.05)'" onmouseout="this.style.backgroundColor='#000000'; this.style.transform='scale(1)'"> Let's Work Together </button>
+      </div>
+     </div>
     </div>
-    <p style="font-size: 14px; line-height: 1.5; color: #ffffff; opacity: 0.9; max-width: 500px; margin: 0 auto;">Leading innovation in AI-powered security solutions and cybersecurity programs</p>
-   </div>
-  </section><!-- About Section -->
-  <section id="about" class="px-4 sm:px-6 py-4 sm:py-5" style="background-color: #ffffff;">
-   <div class="max-w-3xl mx-auto">
-    <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 12px; color: #000000;">About Me</h2>
-    <div style="display: flex; flex-direction: column; gap: 10px;">
-     <p style="font-size: 14px; line-height: 1.6; color: #000000; opacity: 0.9;">As a technology entrepreneur, I've dedicated my career to advancing the field of security through innovative AI solutions. My passion lies in creating cutting-edge technologies that protect businesses and individuals in an increasingly digital world.</p>
-     <p style="font-size: 14px; line-height: 1.6; color: #000000; opacity: 0.9;">Through my company, we deliver comprehensive technology services specializing in AI-driven security systems and custom cybersecurity programs. Our mission is to make advanced security accessible and effective for organizations of all sizes.</p>
+   </section>
+  </div><!-- CONTACT PAGE -->
+  <div id="contact-page" class="page">
+   <section class="px-4 sm:px-6 py-8" style="padding-top: 120px; min-height: 100vh; background-color: #ffffff;">
+    <div class="max-w-3xl mx-auto">
+     <div style="text-align: center; margin-bottom: 48px;">
+      <h1 style="font-size: 48px; font-weight: 800; margin-bottom: 16px; color: #000000;">Let's Connect</h1>
+      <p style="font-size: 20px; line-height: 1.6; color: #000000; opacity: 0.8;">Interested in learning more about how we can secure your digital future?</p>
+      <div style="width: 80px; height: 4px; background-color: #000000; margin: 24px auto 0;"></div>
+     </div><!-- Contact Methods -->
+     <div style="display: grid; gap: 24px; margin-bottom: 48px;"><!-- Email -->
+      <div style="background-color: #f8f9fa; padding: 32px; border-radius: 16px; text-align: center; border-left: 6px solid #000000;">
+       <div style="font-size: 48px; margin-bottom: 16px;">
+        📧
+       </div>
+       <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px; color: #000000;">Email Me</h3>
+       <p style="font-size: 16px; color: #000000; opacity: 0.8; margin-bottom: 20px;">Ready to discuss your security needs? Send me an email and I'll get back to you within 24 hours.</p><a href="mailto:contact@dannysullivan.us" style="display: inline-block; background-color: #000000; color: #ffffff; padding: 16px 32px; border-radius: 8px; font-size: 16px; font-weight: 600; text-decoration: none; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#333333'; this.style.transform='scale(1.05)'" onmouseout="this.style.backgroundColor='#000000'; this.style.transform='scale(1)'"> contact@dannysullivan.us </a>
+      </div><!-- Social Media -->
+      <div style="background-color: #000000; color: #ffffff; padding: 32px; border-radius: 16px; text-align: center;">
+       <div style="font-size: 48px; margin-bottom: 16px;">
+        🌐
+       </div>
+       <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px;">Follow Me Online</h3>
+       <p style="font-size: 16px; opacity: 0.8; margin-bottom: 24px;">Stay updated with my latest insights on technology and security</p>
+       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 16px; max-width: 720px; margin: 0 auto;"><!-- LinkedIn --> <a href="https://linkedin.com/in/dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: 20px; background-color: #ffffff; border-radius: 12px; transition: all 0.3s;">
+         <div style="width: 48px; height: 48px; background-color: #000000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+          <svg width="24" height="24" viewbox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+         </div><span style="font-size: 14px; font-weight: 600; color: #000000;">LinkedIn</span> </a> <!-- X (Twitter) --> <a href="https://x.com/dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: 20px; background-color: #ffffff; border-radius: 12px; transition: all 0.3s;">
+         <div style="width: 48px; height: 48px; background-color: #000000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+          <svg width="24" height="24" viewbox="0 0 24 24" fill="white"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+          </svg>
+         </div><span style="font-size: 14px; font-weight: 600; color: #000000;">X</span> </a> <!-- Instagram --> <a href="https://instagram.com/dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: 20px; background-color: #ffffff; border-radius: 12px; transition: all 0.3s;">
+         <div style="width: 48px; height: 48px; background-color: #000000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+          <svg width="24" height="24" viewbox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+          </svg>
+         </div><span style="font-size: 14px; font-weight: 600; color: #000000;">Instagram</span> </a> <!-- Facebook --> <a href="https://facebook.com/dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: 20px; background-color: #ffffff; border-radius: 12px; transition: all 0.3s;">
+         <div style="width: 48px; height: 48px; background-color: #000000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+          <svg width="24" height="24" viewbox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+          </svg>
+         </div><span style="font-size: 14px; font-weight: 600; color: #000000;">Facebook</span> </a> <!-- WeChat --> <a href="https://wechat.com/dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: 20px; background-color: #ffffff; border-radius: 12px; transition: all 0.3s;">
+         <div style="width: 48px; height: 48px; background-color: #000000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+          <svg width="24" height="24" viewbox="0 0 24 24" fill="white"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 4.882-1.932 7.621-.55-.302-2.676-2.476-4.81-5.362-5.914-1.175-.45-2.405-.722-3.722-.722zm-3.924 5.54a.955.955 0 0 1 .956-.956.955.955 0 0 1 .956.956.955.955 0 0 1-.956.956.955.955 0 0 1-.956-.956zm5.54 0a.955.955 0 0 1 .956-.956.955.955 0 0 1 .956.956.955.955 0 0 1-.956.956.955.955 0 0 1-.956-.956zm7.746.942c-2.876 0-5.202 1.9-5.202 4.244 0 2.345 2.326 4.244 5.202 4.244a7.992 7.992 0 0 0 2.25-.31.671.671 0 0 1 .558.076l1.462.855a.25.25 0 0 0 .128.042.226.226 0 0 0 .223-.223c0-.055-.022-.109-.037-.163l-.3-1.137a.454.454 0 0 1 .164-.511c1.409-1.035 2.31-2.567 2.31-4.273 0-2.344-2.326-4.244-5.202-4.244zM16.7 12.2a.733.733 0 0 1 .734-.734.733.733 0 0 1 .734.734.733.733 0 0 1-.734.734.733.733 0 0 1-.734-.734zm3.468 0a.733.733 0 0 1 .734-.734.733.733 0 0 1 .734.734.733.733 0 0 1-.734.734.733.733 0 0 1-.734-.734z" />
+          </svg>
+         </div><span style="font-size: 14px; font-weight: 600; color: #000000;">WeChat</span> </a> <!-- Threads --> <a href="https://threads.net/@dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: 20px; background-color: #ffffff; border-radius: 12px; transition: all 0.3s;">
+         <div style="width: 48px; height: 48px; background-color: #000000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+          <svg width="24" height="24" viewbox="0 0 24 24" fill="white"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-.584-2.043-1.496-3.467-2.713-4.237-1.404-1.089-3.26-1.641-5.518-1.641h-.04c-3.131.016-5.434 1.078-6.835 3.158C4.168 7.249 3.5 9.581 3.472 12.017v.017c.028 2.432.695 4.766 1.987 6.943.068.116.137.232.208.347 1.388 2.24 3.707 3.416 6.89 3.496h.002c3.262 0 5.639-1.21 7.056-3.596.68-1.146 1.017-2.496 1.017-4.077v-.252c-.017-.593-.048-1.181-.092-1.75-.23-2.974-1.32-5.15-3.234-6.463-1.245-.854-2.79-1.287-4.59-1.287a7.27 7.27 0 0 0-2.044.29l-.650-1.85a9.155 9.155 0 0 1 2.694-.39c2.24 0 4.154.55 5.686 1.634 2.395 1.693 3.7 4.377 3.88 7.974.048.604.081 1.223.098 1.849v.264c0 1.946-.421 3.71-1.263 5.24-1.719 3.124-4.759 4.706-9.04 4.706h-.013z" />
+          </svg>
+         </div><span style="font-size: 14px; font-weight: 600; color: #000000;">Threads</span> </a> <!-- Bluesky --> <a href="https://bsky.app/profile/dannysullivan.bsky.social" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: 20px; background-color: #ffffff; border-radius: 12px; transition: all 0.3s;">
+         <div style="width: 48px; height: 48px; background-color: #000000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+          <svg width="24" height="24" viewbox="0 0 24 24" fill="white"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-2.67-.296-5.568.628-6.383 3.364C.378 17.58 0 22.54 0 23.23c0 .687.139 1.86.902 2.202.659.299 1.664.621 3.3-.24 2.752-1.942 5.711-5.881 6.798-7.995C12.087 19.311 15.046 23.25 17.798 25.192c1.636.861 2.641.539 3.3.24.763-.342.902-1.515.902-2.202 0-.69-.378-5.65-.624-6.479-.815-2.736-3.713-3.66-6.383-3.364-.139.016-.277.034-.415.056.138-.017.276-.036.415-.056 2.67.296 5.568-.628 6.383-3.364.246-.829.624-5.789.624-6.479 0-.688-.139-1.86-.902-2.203-.659-.299-1.664-.621-3.3.24C15.046.747 12.087 4.686 12 6.8z" />
+          </svg>
+         </div><span style="font-size: 14px; font-weight: 600; color: #000000;">Bluesky</span> </a>
+       </div>
+      </div>
+     </div><!-- Back to Home -->
+     <div style="text-align: center;"><button onclick="showPage('home')" style="background-color: transparent; color: #000000; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: 600; border: 2px solid #000000; cursor: pointer; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#000000'; this.style.color='#ffffff'; this.style.transform='scale(1.05)'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#000000'; this.style.transform='scale(1)'"> ← Back to Home </button>
+     </div>
     </div>
-   </div>
-  </section><!-- Contact Section -->
-  <section id="contact" class="px-4 sm:px-6 py-4 sm:py-5" style="background-color: #ffffff;">
-   <div class="max-w-2xl mx-auto text-center">
-    <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 10px; color: #000000;">Let's Connect</h2>
-    <p style="font-size: 14px; line-height: 1.5; margin-bottom: 16px; color: #000000; opacity: 0.9;">Interested in learning more about how we can secure your digital future?</p><a href="mailto:contact@dannysullivan.us" style="display: inline-block; background-color: #000000; color: #ffffff; padding: 12px 24px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.3s; min-width: 120px;" onmouseover="this.style.backgroundColor='#ffffff'; this.style.color='#000000'; this.style.transform='scale(1.05)'" onmouseout="this.style.backgroundColor='#000000'; this.style.color='#ffffff'; this.style.transform='scale(1)'"> Get In Touch </a>
-   </div>
-  </section><!-- Social Media Section -->
-  <section id="social" class="px-4 sm:px-6 py-4 sm:py-5">
-   <div class="max-w-3xl mx-auto text-center">
-    <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 16px; color: #ffffff;">Danny Sullivan Social Media</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 12px; max-width: 600px; margin: 0 auto;"><!-- LinkedIn --> <a href="https://linkedin.com/in/dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: 12px; background-color: #ffffff; border-radius: 8px; transition: all 0.3s;">
-      <div style="width: 40px; height: 40px; background-color: #000000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 8px;">
-       <svg width="20" height="20" viewbox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-       </svg>
-      </div><span style="font-size: 12px; font-weight: 600; color: #000000;">LinkedIn</span> </a> <!-- X (Twitter) --> <a href="https://x.com/dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: 12px; background-color: #ffffff; border-radius: 8px; transition: all 0.3s;">
-      <div style="width: 40px; height: 40px; background-color: #000000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 8px;">
-       <svg width="20" height="20" viewbox="0 0 24 24" fill="white"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-       </svg>
-      </div><span style="font-size: 12px; font-weight: 600; color: #000000;">X</span> </a> <!-- Instagram --> <a href="https://instagram.com/dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: 12px; background-color: #ffffff; border-radius: 8px; transition: all 0.3s;">
-      <div style="width: 40px; height: 40px; background-color: #000000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 8px;">
-       <svg width="20" height="20" viewbox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-       </svg>
-      </div><span style="font-size: 12px; font-weight: 600; color: #000000;">Instagram</span> </a> <!-- Facebook --> <a href="https://facebook.com/dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: 12px; background-color: #ffffff; border-radius: 8px; transition: all 0.3s;">
-      <div style="width: 40px; height: 40px; background-color: #000000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 8px;">
-       <svg width="20" height="20" viewbox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-       </svg>
-      </div><span style="font-size: 12px; font-weight: 600; color: #000000;">Facebook</span> </a> <!-- Threads --> <a href="https://threads.net/@dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: 12px; background-color: #ffffff; border-radius: 8px; transition: all 0.3s;">
-      <div style="width: 40px; height: 40px; background-color: #000000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 8px;">
-       <svg width="20" height="20" viewbox="0 0 24 24" fill="white"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.781 3.631 2.695 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.74-1.755-.365-.424-.84-.636-1.414-.636-.861 0-1.436.357-1.711.357-.3 0-.498-.174-.498-.498 0-.324.224-.498.498-.498.498 0 1.436-.357 2.457-.357 1.022 0 1.872.498 2.457 1.436.498.8.747 1.997.747 3.456v.049c.997.112 1.748.498 2.457 1.19.498.498.747 1.22.747 2.034 0 .498-.125.997-.374 1.436-.498.997-1.436 1.686-2.708 1.686-.498 0-.997-.125-1.436-.374-.498-.249-.872-.623-1.121-1.121-.249-.498-.374-.997-.374-1.436v-.049c-.997-.112-1.748-.498-2.457-1.19-.498-.498-.747-1.22-.747-2.034 0-.498.125-.997.374-1.436.498-.997 1.436-1.686 2.708-1.686.498 0 .997.125 1.436.374.498.249.872.623 1.121 1.121.249.498.374.997.374 1.436z" />
-       </svg>
-      </div><span style="font-size: 12px; font-weight: 600; color: #000000;">Threads</span> </a> <!-- Bluesky --> <a href="https://bsky.app/profile/dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: 12px; background-color: #ffffff; border-radius: 8px; transition: all 0.3s;">
-      <div style="width: 40px; height: 40px; background-color: #000000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 8px;">
-       <svg width="20" height="20" viewbox="0 0 24 24" fill="white"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-2.67-.297-5.568.628-6.383 3.364C.378 17.903 0 22.861 0 23.55c0 .688.139 1.86.902 2.204.659.298 1.664.62 4.3-1.24C7.954 22.572 10.913 18.633 12 16.519c1.087 2.114 4.046 6.053 6.798 7.995 2.636 1.86 3.641 1.538 4.3 1.24.763-.344.902-1.516.902-2.204 0-.689-.378-5.647-.624-6.476-.815-2.736-3.713-3.661-6.383-3.364-.139.016-.277.034-.415.056.138-.017.276-.036.415-.056 2.67.297 5.568-.628 6.383-3.364.246-.829.624-5.789.624-6.479 0-.688-.139-1.86-.902-2.203-.659-.299-1.664-.621-4.3 1.24C16.046 4.747 13.087 8.686 12 10.8z" />
-       </svg>
-      </div><span style="font-size: 12px; font-weight: 600; color: #000000;">Bluesky</span> </a> <!-- WeChat --> <a href="https://weixin.qq.com/dannysullivan" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; padding: 12px; background-color: #ffffff; border-radius: 8px; transition: all 0.3s;">
-      <div style="width: 40px; height: 40px; background-color: #000000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 8px;">
-       <svg width="20" height="20" viewbox="0 0 24 24" fill="white"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.99 4.203 4.203 4.203.5 0 .985-.094 1.44-.281l2.906 1.453-.813-2.406c.188-.188.375-.375.563-.563 1.031-1.031 1.594-2.406 1.594-3.906 0-4.054-3.891-7.342-8.691-7.342zm-2.219 5.281c-.688 0-1.25-.563-1.25-1.25s.563-1.25 1.25-1.25 1.25.563 1.25 1.25-.563 1.25-1.25 1.25zm4.438 0c-.688 0-1.25-.563-1.25-1.25s.563-1.25 1.25-1.25 1.25.563 1.25 1.25-.563 1.25-1.25 1.25zm7.313 1.25c.5 0 .985.094 1.44.281l2.906-1.453-.813 2.406c.188.188.375.375.563.563 1.031 1.031 1.594 2.406 1.594 3.906 0 4.054-3.891 7.342-8.691 7.342-4.8 0-8.691-3.288-8.691-7.342 0-2.212 1.99-4.203 4.203-4.203zm-2.219 5.281c-.688 0-1.25-.563-1.25-1.25s.563-1.25 1.25-1.25 1.25.563 1.25 1.25-.563 1.25-1.25 1.25zm4.438 0c-.688 0-1.25-.563-1.25-1.25s.563-1.25 1.25-1.25 1.25.563 1.25 1.25-.563 1.25-1.25 1.25z" />
-       </svg>
-      </div><span style="font-size: 12px; font-weight: 600; color: #000000;">WeChat</span> </a>
-    </div>
-   </div>
-  </section><!-- Footer -->
-  <footer class="px-6 py-4 text-center" style="border-top: 1px solid #ffffff;">
-   <p style="font-size: 14px; color: #ffffff; opacity: 0.7;">© 2019 Danny Sullivan. All rights reserved.</p>
-  </footer>
+   </section>
+  </div>
   <script>
-    // Add hamburger menu functionality
+    let currentPage = 'home';
+
+    function showPage(pageId) {
+      // Hide all pages
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => {
+        page.classList.remove('active');
+      });
+
+      // Show selected page
+      const targetPage = document.getElementById(pageId + '-page');
+      if (targetPage) {
+        targetPage.classList.add('active');
+        currentPage = pageId;
+      }
+
+      // Update navigation active states
+      updateNavigation();
+
+      // Close mobile menu if open
+      closeMobileMenu();
+
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function updateNavigation() {
+      // Update desktop navigation
+      const navLinks = document.querySelectorAll('.nav-link:not(.mobile-nav-link)');
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('onclick');
+        if (href && href.includes(currentPage)) {
+          link.classList.add('active');
+        }
+      });
+
+      // Update mobile navigation
+      const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+      mobileNavLinks.forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('onclick');
+        if (href && href.includes(currentPage)) {
+          link.classList.add('active');
+        }
+      });
+    }
+
+    function closeMobileMenu() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.style.transform = 'translateY(-100%)';
+      mobileMenu.style.opacity = '0';
+      mobileMenu.style.visibility = 'hidden';
+      isMenuOpen = false;
+    }
+
+    // Hamburger menu functionality
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     let isMenuOpen = false;
@@ -140,34 +278,12 @@
         mobileMenu.style.opacity = '1';
         mobileMenu.style.visibility = 'visible';
       } else {
-        mobileMenu.style.transform = 'translateY(-100%)';
-        mobileMenu.style.opacity = '0';
-        mobileMenu.style.visibility = 'hidden';
+        closeMobileMenu();
       }
     });
 
-    // Close menu when clicking on links
-    const menuLinks = mobileMenu.querySelectorAll('a');
-    menuLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        // Close menu
-        isMenuOpen = false;
-        mobileMenu.style.transform = 'translateY(-100%)';
-        mobileMenu.style.opacity = '0';
-        mobileMenu.style.visibility = 'hidden';
-        
-        // Smooth scroll to section
-        e.preventDefault();
-        const targetId = link.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-        if (targetSection) {
-          targetSection.scrollIntoView({ 
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
+    // Initialize navigation on page load
+    updateNavigation();
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'999244aed701f0e0',t:'MTc2MjIzOTk4Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'999265e303220fec',t:'MTc2MjI0MTM0Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
